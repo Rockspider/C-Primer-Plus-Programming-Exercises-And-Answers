@@ -12,7 +12,7 @@ void find_largest(int * p){
 	
 	int large = *p;
 	for(int j=0;j<10;j++){
-		if(*p < *(p + j))
+		if(large < *(p + j))
 			large = *(p+j);
 				
 	}
