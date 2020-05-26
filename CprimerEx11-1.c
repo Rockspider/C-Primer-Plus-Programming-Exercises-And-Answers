@@ -9,20 +9,28 @@ int main(void){
 	char sArray[LEN];
 	printf("%s\n","How many characters do you want to print");
 	scanf("%d",&num);
-	printf("%s\n","Go Ahead! write what you want");
-	prArray(sArray,&num);
-	puts("\n");
-	puts ("Array completed");
-		
+	while(num>0){
+		printf("%s\n","Go Ahead! write what you want");
+		prArray(sArray,&num);
+		printf("%s\n","How many characters do you want to print");
+		scanf("%d",&num);
+	}
+	puts("Program completed");
 }
 
 void prArray(char * Arr, int * n){
 	char ch;
 	int count=0;
-	while ((ch=getchar())!= EOF){
+	while ((ch=getchar())!= '#'){
 		if (count <= *n)
 			*(Arr + count) = ch;		
+		else
+			ch = '#';
 		count++;
 	}
-	printf("%s\n",Arr);
+	printf("printing %d characters\n",*n);
+	for (int i=0;i<=*n;i++){
+	printf("%c",*(Arr+i));
+	}
+	printf("\n");
 }
