@@ -28,11 +28,9 @@ char * string(char * s, int l){
 
 char * search(char * s,int n, char c){
 	char ch;
-	int found = 0;
 	for (int i=0;i<n;i++){
 		ch = *(s+i);
 		if(c == ch){
-			found = 1;			
 			return (s+i);
 		}
 		else
