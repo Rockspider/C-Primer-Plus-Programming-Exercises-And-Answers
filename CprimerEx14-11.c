@@ -20,7 +20,9 @@ int main(void)
 	double source[10]={20,30,40,50,60,70,80,90,100,200};
 	double target[10];
 	transform(source,target,10,sin);
+	puts("*********************************");
 	transform(source,target,10,cos);
+	puts("*********************************");
 	transform(source,target,10,t_f);
 }
 
